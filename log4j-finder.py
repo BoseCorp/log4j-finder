@@ -180,6 +180,8 @@ def iter_jarfile(fobj, parents=None, stats=None):
     except RuntimeError as e:
         # RuntimeError: File 'encrypted.zip' is encrypted, password required for extraction
         log.debug(f"{fobj}: {e}")
+    except:
+        log.info(f"Unknown error at {fobj.name}")
 
 
 def red(s):
